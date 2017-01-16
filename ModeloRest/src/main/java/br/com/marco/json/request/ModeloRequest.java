@@ -6,14 +6,14 @@ public class ModeloRequest implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String codigoPedido;
+	private String zipCode;
 
-	public String getCodigoPedido() {
-		return codigoPedido;
+	public String getZipCode() {
+		return zipCode;
 	}
 
-	public void setCodigoPedido(String codigoPedido) {
-		this.codigoPedido = codigoPedido;
+	public void setZipCode(String codigoPedido) {
+		this.zipCode = codigoPedido;
 	}
 	
 }

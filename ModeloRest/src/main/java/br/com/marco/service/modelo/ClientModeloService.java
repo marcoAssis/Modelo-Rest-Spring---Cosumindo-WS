@@ -10,15 +10,15 @@ import br.com.modelo.json.response.ModeloResponse;
 @Service
 public class ClientModeloService extends WebServiceGatewaySupport{
 	
-	public ModeloResponse getCidadePorCep(String cep) {
+	public Object getCidadePorCep(String cep) {
 
 		ModeloRequest request = new ModeloRequest();
-		request.setCodigoPedido(cep);
+		request.setZipCode("94304");
 
-		ModeloResponse response = (ModeloResponse) getWebServiceTemplate().marshalSendAndReceive(
-				"http://www.byjg.com.br/site/webservice.php/ws/cep",		
+		Object response = (ModeloResponse) getWebServiceTemplate().marshalSendAndReceive(
+				"http://wsf.cdyne.com/WeatherWS/Weather.asmx",		
 				request,
-				new SoapActionCallback("http://www.byjg.com.br/site/webservice.php/ws/cep?wsdl"));
+				new SoapActionCallback("http://argentumws.caelum.com.br/negociacoes"));
 
 		return response;
 }
